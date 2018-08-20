@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link rel="icon" type="image/png" href="#"/>
+    <!-- FONTS -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:100" rel="stylesheet">
+    <!-- -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<title>EE290O</title>
+</head>
+    <body>
+        <section>
+            Final is coming up on August 9th at 2:40pm.
+        </section>
+        <div class='nav'>
+            <a href="index.html" style='color:#003171;'>EE290O</a>
+            <a href="schedule.html">Schedule</a>
+        </div>
+        <a href='index.html' class='title'><h1 class='scroll-fade'><span style='color:#003171;'>EE290O&nbsp|&nbsp</span><span>Deep multi-agent reinforcement learning with applications to autonomous traffic</span></h1></a>
+        
+        <!-- PREREQUISITES -->
+        <div>
+            <h2 class='scroll-fade'>Prerequisites for this class</h2>
+            <ul>
+                <li>
+                    <h3>Proficiency in Python</h3>
+                    <p>All class assignments will be in Python (using numpy and Tensorflow and optionally Keras). There is a tutorial <a href='http://cs231n.github.io/python-numpy-tutorial/'>here</a> for those who aren't as familiar with Python. If you have a lot of programming experience but in a different language (e.g. C/C++/Matlab/Javascript) you will probably be fine.</p>
+                </li>
+                <li>
+                    <h3>College Calculus, Linear Algebra</h3>
+                    <p>(e.g. MATH ??, MATH 54): You should be comfortable taking derivatives and understanding matrix vector operations and notation.</p>
+                </li>
+                <li>
+                    <h3>Basic Probability and Statistics</h3>
+                    <p>(e.g. CS ?? or other STATS courses): You should know basics of probabilities, Gaussian distributions, mean, standard deviation, etc.</p>
+                </li>
+            </ul>
+            <h2 class='scroll-fade'>Not required but helpful</h2>
+            <ul>
+                <li>
+                    <h3>Foundations of Machine Learning</h3>
+                    <p>We will be formulating cost functions, taking derivatives and performing optimization with gradient descent. Either UC Berkeley CS 189/289 or Stanford CS 229 covers this background. Some optimization tricks will be more intuitive with some knowledge of convex optimization.</p>
+                </li>
+            </ul>
+        </div>
+        <!-- -->
+        
+        <!-- COURSE INSTRUCTORS -->
+        <div>
+            <h2 class='scroll-fade'>Course Instructors</h2>
+            <div class='instructor_headshots'>
+                <a href='http://bayen.eecs.berkeley.edu/'>
+                    <div class='headshot' style='background:url(instructor_headshots/orig_bayen_0434_2013.jpg) no-repeat center;background-size:cover;'></div>
+                    <h3>Alexandre Bayen</h3>
+                </a>
+                <a href='https://eugenevinitsky.github.io'>
+                    <div class='headshot' style='background:url(instructor_headshots/headshot-vinitsky.png) no-repeat center;background-size:cover;'></div>
+                    <h3>Eugene Vinitsky</h3>
+                </a>
+		<a href='mailto:aboudy@berkeley.edu'>
+		    <div class='headshot' style=''></div>
+		    <h3>Aboudy Kreidieh</h3>
+		</a>	
+                <a href='mailto:yzfarid@berkeley.edu'>
+                    <div class='headshot' style='background:url(instructor_headshots/IMG_4450.JPG) no-repeat center;background-size:cover;'></div>
+                    <h3>Yashar Zeiynali Farid</h3>
+                </a>
+		<a href='http://wucathy.com/'>
+                    <div class='headshot' style='background:url(instructor_headshots/headshot-head.jpg) no-repeat center;background-size:cover;'></div>
+                    <h3>Cathy Wu</h3>
+                </a>
+            </div>
+        </div>
+        <!-- -->
+        
+        <!--COURSE DESCRIPTION -->
+        <div>
+            <h2 class='scroll-fade'>Course Description</h2>
+            <p>In this class, students will learn the fundamental techniques of machine learning (ML) / reinforcement learning (RL) required to train multi-agent systems to accomplish autonomous tasks in complex environments. Foundations include reinforcement learning, dynamical systems, control, neural networks, state estimation, and partially observed Markov decision processes (POMDPs). Core methods include Deep Q Networks (DQN), actor-critic methods, and derivative-free methods. Multi-agent reinforcement learning topics include independent learners, action-dependent baselines, MADDPG, QMIX, shared policies, multi-headed policies, feudal reinforcement learning, switching policies, and adversarial training. The students will have the opportunity to implement the techniques learned on a multi-agent simulation platform, called <a href='https://berkeleyflow.github.io/'>Flow</a>, which integrates RL libraries and SUMO (a state-of-the-art microsimulation software) on AWS EC2. The students may alternatively implement the techniques learned on their own platforms or platforms of their choice (in which case they are responsible for implementation). The class will teach applications of the ML/RL methods in the context of urban mobility and mixed autonomy, i.e., insertion of self driving vehicles in human-driven traffic. Thus the class will also includes an introduction to traffic modeling to enable the students to perform meaningful simulations, on benchmark cases as well as concrete calibrated models with field data.</p>
+        </div>
+        <!-- -->
+        
+        <!-- LEARNING OUTCOMES -->
+        <div>
+            <h2 class='scroll-fade'>Learning Outcomes</h2>
+            <p>By the end of the class students should be able to:</p>
+            <ul>
+                <li>
+                    Define the key features of RL that distinguishes it from artificial intelligence and non-interactive ML (as assessed by homework).
+                </li>
+                <li>
+                    Given an application problem (e.g. from transportation, computer vision, robotics, etc), decide if it should be formulated as a RL problem; if yes, be able to define it formally (in terms of the state space, action space, dynamics and reward model), state what algorithm (from class) is best suited for addressing it, and justify your answer (as assessed by the project).
+                </li>
+                <li>
+                    Implement in code common RL algorithms such as imitation learning (as assessed by the homework).
+                </li>
+                <li>
+                    Describe the exploration vs exploitation challenge and compare and contrast at least two approaches for addressing this challenge (in terms of performance, scalability, complexity of implementation, and theoretical guarantees) (as assessed by homework).
+                </li>
+                <li>
+                    Identify key problems in vehicle transportation that are worth future study.
+                </li>
+                <li>
+                    Understand how to quantify core performance metrics in transportation engineering, such as throughput, safety, and comfort.
+                </li>
+            </ul>
+        </div>
+        <!-- -->
+        
+        <!-- CLASS TIME AND LOCATION / COURSE SCHEDULE -->
+        <div>
+            <h2 class='scroll-fade'>Class Time and Location</h2>
+            <p>Fall Semester (August 23 - December ??, 2018)<br>
+               Lecture: Tuesday, Thursday 3:30-5:00pm<br>
+               Location: <???></p>
+            <h2 class='scroll-fade'>Course Schedule / Syllabus (Including Due Dates)</h2>
+            <p>See the <a href='schedule.html'>Course Schedule page.</a></p>
+        </div>
+        <!-- -->
+        
+        <!-- TEXTBOOKS -->
+        <div>
+            <h2 class='scroll-fade'>Textbooks</h2>
+            <p>There is no official textbook for the class but a number of the supporting readings will come from:</p>
+            <ul>
+                <li>Reinforcement Learning: An Introduction, Sutton and Barto, 2nd Edition. This is available for free <a href='http://incompleteideas.net/book/the-book-2nd.html'>here</a> and references will refer to the January 1 2018 draft available <a href='http://incompleteideas.net/book/bookdraft2018jan1.pdf'>here</a>.</li>
+            </ul>
+            <p>Some other additional references that may be useful are listed below:</p>
+            <ul>
+                <li>
+                    Reinforcement Learning: State-of-the-Art, Marco Wiering and Martijn van Otterlo, Eds. <a href='https://link.springer.com/book/10.1007%2F978-3-642-27645-3'>[link]</a>
+                </li>
+                <li>
+                    Artificial Intelligence: A Modern Approach, Stuart J. Russell and Peter Norvig. <a href='http://aima.cs.berkeley.edu/'>[link]</a>
+                </li>
+                <li>
+                    Deep Learning, Ian Goodfellow, Yoshua Bengio, and Aaron Courville. <a href='http://www.deeplearningbook.org/'>[link]</a>
+                </li>
+                <li>
+                    Traffic Flow Dynamics, Martin Treiber and Arne Kesting. <a href='https://www.springer.com/us/book/9783642324598'>[link]</a>
+                </li>
+            </ul>
+        </div>
+        <!-- -->
+        
+        <!-- GRADE BREAKDOWN -->
+        <div>
+            <h2 class='scroll-fade'>Grade Breakdown</h2>
+            <ul>
+                <li>Assignment 1: 10%</li>
+                <li>Assignment 2: 20%</li>
+                <li>Assignment 3: 15%</li>
+                <li>Assignment 4: 15%</li>
+                <li>
+                    Course Project: 25%
+                    <ul style='margin:0;'>
+                        <li>Proposal: 1%</li>
+                        <li>Milestone: 3%</li>
+                        <li>Poster Presentation: 5%</li>
+                        <li>Paper: 16%</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!-- -->
+        
+        <!-- LATE DAY POLICY -->
+        <div>
+            <h2 class='scroll-fade'>Late Day Policy</h2>
+            <ul>
+                <li>You can use 6 late days.</li>
+                <li>A late day extends the deadline by 24 hours.</li>
+                <li>You are allowed up to 2 late days per assignment. If you hand an assignment in after 48 hours, it will be worth at most 50% of the full credit. No credit will be given to assignments handed in after 72 hours — contact us if you think you have an extremely rare circumstance for which we should make an exception. This policy is to ensure that feedback can be given in a timely manner.</li>
+                <li>You can use late days on the project proposal (up to 2) and milestone (up to 2). No late days are allowed for the poster presentation and final report. Any late days on the project writeup will decrease the potential score on the project by 25% of the full credit. To use a late day on the project proposal or milestone, it is allowable to pool late days between team members: in order words, one can use any single team member’s late day (e.g. team member A can use her late day, and team member B can use his late day, and that yields 2 total late days for the project proposal).</li>
+            </ul>
+        </div>
+        <!-- -->
+        
+        <!--  HOMEWORK SUBMISSION -->
+        <div>
+            <h2 class='scroll-fade'>Homework submissions</h2>
+        </div>
+        <!-- -->
+        
+        <!-- REGRADING REQUESTS -->
+        <div>
+            <h2 class='scroll-fade'>Regrading Requests</h2>
+            <ul>
+                <li>If you think that the course staff made a quantifiable error in grading your assignment or exam, then you are welcome to submit a regrade request. If you wish to do so, you must come <strong>in person</strong> to one of the graders for the assignment or exam question -- the owners will be clearly stated on an assignment webpage or in the exam feedback. In considering whether to make a request, we encourage you to consider that even if the grading may seem overly strict to you, we are applying the same rubric to all students for fairness, so the strictness of the grading is not a suitable justification request for a regrade. Regrade requests will only be accepted for three days after assignments are returned.</li>
+                <li>Note that while doing a regrade we may review your entire assignment, not just the part you bring to our attention (i.e. we may find errors in your work that we missed before).</li>
+            </ul>
+        </div>
+        
+        <!-- OFFICE HOURS -->
+        <div>
+            <h2 class='scroll-fade'>Office Hours</h2>
+            <ul>
+                <li>XXX’s office hours will be held in ROOM at TIME.</li>
+                <li>YYY’s office hours will be held in ROOM at TIME.</li>
+            </ul>
+        </div>
+        <!-- -->
+        
+        <!-- ATTENDANCE -->
+        <div>
+            <h2 class='scroll-fade'>Attendance</h2>
+            <p>Attendance is not required but is encouraged. Lectures are not recorded. Sometimes we may do in class exercises or discussions and these are harder to do and benefit from by yourself.</p>
+        </div>
+        <!-- -->
+        
+        <!-- COMMUNICATION -->
+        <div>
+            <h2 class='scroll-fade'>Communication</h2>
+            <p>We believe students often learn an enormous amount from each other as well as from us, the course staff. Therefore to facilitate discussion and peer learning, we request that you please use Piazza for all questions related to lectures, homework and projects. When discussing solutions on Piazza, take care not to post words, code, or math that directly leads to solutions.</p>
+            <p>You will be awarded with up to 2% extra credit if you answer other students' questions in a substantial and helpful way on Piazza.</p>
+        </div>
+        <!-- -->
+        
+        <div class='footer' style='margin-bottom:20px;'>
+            <a href="index.html" style='color:#003171;'>EE290O</a>
+            <a href="schedule.html">Schedule</a>
+        </div>
+    </body>
+</html>
+<style>
+    html{
+        height:100vh;
+        width:100vw;
+        margin:0;
+        padding:0;
+        -webkit-overflow-scrolling: touch;
+        font-family:'Work Sans',sans-serif;
+    }
+    body{
+	   cursor:default;
+	   margin:0;
+	   overflow-x:hidden;
+        height:100%;
+        width:100vw;
+        display:grid;
+        grid-template-columns:100%;
+        justify-content: center;
+        transition:500ms cubic-bezier(.64,0,.34,1.06);
+        grid-gap:20px;
+    }
+    .title{
+	   max-width:800px;
+	   justify-self:center;
+	   color:black;
+	   text-decoration:none;
+	   margin:0 15px 30px 0;
+    }
+    .title h1{
+        display:grid;
+        grid-template-columns:max-content auto;
+        justify-content: center;
+    }
+    body p, body ul li {
+        font-family:'Roboto', sans-serif;
+        font-size:1em;
+    }
+    ul{
+        margin: 15px;
+    }
+    p{
+        margin: 10px 15px;
+    }
+    a:not(.title){
+        text-decoration:none;
+        color:#CC6C34;
+    }
+    a:not(.title):hover{
+        text-decoration:underline;
+    }
+    body > div:nth-child(odd):not(.nav):not(.footer){
+        background:whitesmoke;
+        padding:20px 0;
+    }
+    body > div{
+        display:grid;
+        grid-template-columns:minmax(min-content,800px);
+        justify-content:center;
+        text-align: justify;
+    }
+    h1,h2,h3{
+        margin:0 15px;
+    }
+    
+    /*-----Course Instructors-----*/
+    .instructor_headshots{
+        display:grid;
+        grid-template-columns: repeat(5,1fr);
+        grid-gap:15px;
+        margin-top:30px;
+    }
+    .instructor_headshots > a{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        color:black;
+    }
+    .headshot{
+        overflow:hidden;
+        width:90px;
+        height:90px;
+        border-radius:50%;
+    }
+    .instructor_headshots h3 {
+        font-size:1.1em;
+        margin-top:10px;
+        text-align: center;
+    }
+    /*-----------*/
+    
+    /*-----Nav bar-----*/
+    .nav,.footer{
+        font-family:'Roboto', sans-serif;
+        display:flex;
+        justify-content: space-around;
+        align-items:center;
+	   overflow:hidden;
+	   height:40px;
+	}
+    .nav > a, .footer > a {
+        color:darkgrey;
+        text-decoration:none;
+        transition:150ms ease-out;
+    }
+    .nav > a:hover, .footer > a:hover{
+	text-decoration:underline;
+    }
+    /*-----News Section-----*/
+    section{
+        display:grid;
+        grid-template-columns:minmax(min-content,800px);
+        justify-content:center;
+        align-content:center;
+        text-align: center;
+        background:#829AB9;
+        color:white;
+        height:80px;
+        overflow:hidden;
+        font-family: 'Quicksand', sans-serif;
+    }
+    
+    @media all and (max-width: 700px) {
+        .instructor_headshots{
+            grid-template-columns: 1fr 1fr;
+        }
+        .title h1{
+            font-size:1.3em;
+        }
+	h2{
+            font-size:1.3em;
+        }
+        h3{
+            font-size:1.2em;
+        }
+    }
+</style>
+<script> 
+/*-----SCROLLING EFFECT-----*/   
+$.fn.moveIt = function(){
+  var $window = $(window);
+  var instances = [];
+  
+  $(this).each(function(){
+    instances.push(new moveItItem($(this)));
+  });
+  
+  window.addEventListener('scroll', function(){
+    var scrollTop = $window.scrollTop();
+    instances.forEach(function(inst){
+      inst.update(scrollTop);
+    });
+  }, {passive: true});
+}
+
+var moveItItem = function(el){
+  this.el = $(el);
+};
+
+moveItItem.prototype.update = function(scrollTop){
+$decalage = -30;
+if(this.el.offset().top - $(window).scrollTop() < $decalage){
+    $height = $decalage;
+    $opacite = 1 + (this.el.offset().top - $(window).scrollTop())/this.el.height();
+}
+else if(this.el.offset().top - $(window).scrollTop() > $(window).height()){
+    $height = -$decalage;
+}
+else{
+    $height = 0;
+    $opacite = ($(window).scrollTop()+$(window).height()-this.el.offset().top)/this.el.height();
+}
+this.el.css('transform','translateY('+ $height + 'px)');
+this.el.css('opacity',$opacite);
+};
+// Initialization
+$(function(){
+  $('.scroll-fade').moveIt();
+});
+// ne pas mettre overflow:hidden dans le .html sinon ne fonctionne pas
+$('.scroll-fade').css('transition','300ms ease-out');
+</script>
