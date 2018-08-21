@@ -1,1 +1,1 @@
-# EE290O
+# EE290 course webpageO
