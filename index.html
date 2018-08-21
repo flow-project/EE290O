@@ -23,7 +23,7 @@
         </div>
         <a href='index.html' class='title'><h1 class='scroll-fade'><span style='color:#003171;'>EE290O&nbsp|&nbsp</span><span>Deep multi-agent reinforcement learning with applications to autonomous traffic</span></h1></a>
         
-        <!-- PREREQUISITES -->
+	<!-- PREREQUISITES -->
         <div>
             <h2 class='scroll-fade'>Prerequisites for this class</h2>
             <ul>
@@ -33,11 +33,11 @@
                 </li>
                 <li>
                     <h3>College Calculus, Linear Algebra</h3>
-                    <p>(e.g. MATH 54 or equivalent): You should be comfortable taking derivatives and understanding matrix vector operations and notation.</p>
+                    <p>(e.g. MATH ??, MATH 54): You should be comfortable taking derivatives and understanding matrix vector operations and notation.</p>
                 </li>
                 <li>
                     <h3>Basic Probability and Statistics</h3>
-                    <p>(e.g. CS 70 or equivalent): You should know basics of probabilities, Gaussian distributions, mean, standard deviation, etc.</p>
+                    <p>(e.g. CS ?? or other STATS courses): You should know basics of probabilities, Gaussian distributions, mean, standard deviation, etc.</p>
                 </li>
             </ul>
             <h2 class='scroll-fade'>Not required but helpful</h2>
@@ -45,7 +45,9 @@
                 <li>
                     <h3>Foundations of Machine Learning</h3>
                     <p>We will be formulating cost functions, taking derivatives and performing optimization with gradient descent. Either UC Berkeley CS 189/289 or Stanford CS 229 covers this background. Some optimization tricks will be more intuitive with some knowledge of convex optimization.</p>
-                </li>
+		    <h3>Artificial Intelligence</h3>
+		    <p>We will be covering advanced search methods. UC Berkeley CS188 covers the background. We will not assume knowledge of Markov Decision Processes and exact reinforcement learning methods.</p>
+		</li>
             </ul>
         </div>
         <!-- -->
@@ -106,7 +108,7 @@
                     Identify key problems in vehicle transportation that are worth future study.
                 </li>
                 <li>
-                    Understand how to quantify core performance metrics in transportation engineering, such as throughput, safety, and comfort.
+                    Understand challenges in multi-agent RL and be able to formulate research solutions to them.
                 </li>
             </ul>
         </div>
@@ -120,6 +122,8 @@
                Location: <???></p>
             <h2 class='scroll-fade'>Course Schedule / Syllabus (Including Due Dates)</h2>
             <p>See the <a href='schedule.html'>Course Schedule page.</a></p>
+		<h2>Piazza</h2>
+		<p><a href='piazza.com/berkeley/fall2018/ee290o'>piazza.com/berkeley/fall2018/ee290o</a><p>
         </div>
         <!-- -->
         
@@ -133,16 +137,16 @@
             <p>Some other additional references that may be useful are listed below:</p>
             <ul>
                 <li>
-                    Reinforcement Learning: State-of-the-Art, Marco Wiering and Martijn van Otterlo, Eds. <a href='https://link.springer.com/book/10.1007%2F978-3-642-27645-3'>[link]</a>
-                </li>
-                <li>
-                    Artificial Intelligence: A Modern Approach, Stuart J. Russell and Peter Norvig. <a href='http://aima.cs.berkeley.edu/'>[link]</a>
-                </li>
-                <li>
                     Deep Learning, Ian Goodfellow, Yoshua Bengio, and Aaron Courville. <a href='http://www.deeplearningbook.org/'>[link]</a>
                 </li>
                 <li>
                     Traffic Flow Dynamics, Martin Treiber and Arne Kesting. <a href='https://www.springer.com/us/book/9783642324598'>[link]</a>
+                </li>
+		<li>
+                    Reinforcement Learning: State-of-the-Art, Marco Wiering and Martijn van Otterlo, Eds. <a href='https://link.springer.com/book/10.1007%2F978-3-642-27645-3'>[link]</a>
+                </li>
+                <li>
+                    Artificial Intelligence: A Modern Approach, Stuart J. Russell and Peter Norvig. <a href='http://aima.cs.berkeley.edu/'>[link]</a>
                 </li>
             </ul>
         </div>
@@ -159,10 +163,10 @@
                 <li>
                     Course Project: 40%
                     <ul style='margin:0;'>
-                        <li>Proposal: 2%</li>
+                        <li>Proposal: 1%</li>
                         <li>Milestone: 8%</li>
                         <li>Poster Presentation: 10%</li>
-                        <li>Paper: 20%</li>
+                        <li>Paper: 21%</li>
                     </ul>
                 </li>
             </ul>
@@ -191,7 +195,7 @@
         <div>
             <h2 class='scroll-fade'>Regrading Requests</h2>
             <ul>
-                <li>If you think that the course staff made a quantifiable error in grading your assignment or exam, then you are welcome to submit a regrade request. If you wish to do so, you must come <strong>in person</strong> to one of the graders for the assignment or exam question -- the owners will be clearly stated on an assignment webpage or in the exam feedback. In considering whether to make a request, we encourage you to consider that even if the grading may seem overly strict to you, we are applying the same rubric to all students for fairness, so the strictness of the grading is not a suitable justification request for a regrade. Regrade requests will only be accepted for three days after assignments are returned.</li>
+                <li>If you think that the course staff made a quantifiable error in grading your assignment or exam, then you are welcome to submit a regrade request. If you wish to do so, you must <strong>come in person</strong> to one of the graders for the assignment or exam question -- the owners will be clearly stated on an assignment webpage or in the exam feedback. In considering whether to make a request, we encourage you to consider that even if the grading may seem overly strict to you, we are applying the same rubric to all students for fairness, so the strictness of the grading is not a suitable justification request for a regrade. Regrade requests will only be accepted for three days after assignments are returned.</li>
                 <li>Note that while doing a regrade we may review your entire assignment, not just the part you bring to our attention (i.e. we may find errors in your work that we missed before).</li>
             </ul>
         </div>
@@ -199,10 +203,7 @@
         <!-- OFFICE HOURS -->
         <div>
             <h2 class='scroll-fade'>Office Hours</h2>
-            <ul>
-                <li>Office hours will be determined on first day.</li>
-
-            </ul>
+	    <p>All office hours will be held in McLaughlin 109 at TBD</p>
         </div>
         <!-- -->
         
@@ -220,6 +221,13 @@
             <p>You will be awarded with up to 2% extra credit if you answer other students' questions in a substantial and helpful way on Piazza.</p>
         </div>
         <!-- -->
+        
+	<!-- ANNOUNCEMENTS -->
+	<div>
+	    <h2>Announcements</h2>
+	    <p>Announcements will be posted via email.</p>
+	</div>
+	<!-- -->
         
         <div class='footer' style='margin-bottom:20px;'>
             <a href="index.html" style='color:#003171;'>EE290O</a>
