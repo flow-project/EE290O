@@ -1,7 +1,7 @@
 """Utility objects and methods for homework 3."""
 from flow.core.params import SumoParams, EnvParams, InitialConfig, NetParams
 from flow.core.vehicles import Vehicles
-from flow.scenarios import LoopScenario, CircleGenerator
+from flow.scenarios.loop import LoopScenario
 from flow.controllers import RLController, IDMController, ContinuousRouter
 import matplotlib.pyplot as plt
 import numpy as np
@@ -68,7 +68,6 @@ def get_params(render=False):
 
     scenario = LoopScenario(
         name="stabilizing_the_ring",
-        generator_class=CircleGenerator,
         vehicles=vehicles,
         net_params=net_params,
         initial_config=initial_config
